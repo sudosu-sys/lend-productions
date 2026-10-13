@@ -653,35 +653,36 @@ h2 span {
   background: #242527;
 }
 
+
+
 .portfolio-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  grid-template-rows: repeat(2, minmax(235px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
 .portfolio-card {
   position: relative;
   min-width: 0;
-  min-height: 250px;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   isolation: isolate;
   background: #353535;
-}
-
-.portfolio-tall {
-  grid-row: span 2;
-  min-height: 510px;
 }
 
 .portfolio-image {
   position: absolute;
   z-index: -2;
   inset: 0;
+  background-color: #242527;
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
   transition: transform 450ms ease;
 }
+
+
 
 .portfolio-card:hover .portfolio-image {
   transform: scale(1.045);
@@ -1118,10 +1119,9 @@ h2 span {
     grid-template-rows: auto;
   }
 
-  .portfolio-card,
-  .portfolio-tall {
+  .portfolio-card {
     grid-row: auto;
-    min-height: 350px;
+    min-height: auto;
   }
 
   .contact-section {
@@ -1214,9 +1214,8 @@ h2 span {
     font-size: 8px;
   }
 
-  .portfolio-card,
-  .portfolio-tall {
-    min-height: 290px;
+  .portfolio-card {
+    min-height: auto;
   }
 
   .portfolio-overlay {

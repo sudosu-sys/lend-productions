@@ -1,5 +1,5 @@
-"use client";
 
+"use client";
 
 import { ArrowUpRight } from "@phosphor-icons/react";
 
@@ -7,23 +7,22 @@ const projects = [
   {
     title: "Product & Brand",
     category: "PHOTOGRAPHY",
-    image:
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1100&q=85",
-    className: "portfolio-tall",
+    image: "/images/portfolio/Golden Hour Wedding Photography.png",
   },
   {
     title: "The Moving Image",
     category: "VIDEO PRODUCTION",
-    image:
-      "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85",
-    className: "",
+    image: "/images/portfolio/Recording Studio Smartphone Setup.png",
   },
   {
     title: "Culture in Focus",
     category: "CREATIVE DIRECTION",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=85",
-    className: "",
+    image: "/images/portfolio/Photographer Walking Through Sunlit Park.png",
+  },
+  {
+    title: "Editorial Look",
+    category: "ART DIRECTION",
+    image: "/images/portfolio/Behind-the-Scenes Studio Shoot.png",
   },
 ];
 
@@ -37,6 +36,7 @@ export default function Portfolio() {
               <span className="eyebrow-line" />
               SELECTED VISUALS
             </div>
+
             <h2>
               Work that speaks
               <br />
@@ -53,7 +53,7 @@ export default function Portfolio() {
         <div className="portfolio-grid">
           {projects.map((project, index) => (
             <article
-              className={`portfolio-card ${project.className}`}
+              className="portfolio-card"
               key={project.title}
             >
               <div
@@ -62,6 +62,7 @@ export default function Portfolio() {
                 role="img"
                 aria-label={`Editorial visual for ${project.title}`}
               />
+
               <div className="portfolio-overlay">
                 <div>
                   <span className="portfolio-category">
@@ -69,6 +70,7 @@ export default function Portfolio() {
                   </span>
                   <h3>{project.title}</h3>
                 </div>
+
                 <span className="portfolio-index">
                   0{index + 1}
                   <ArrowUpRight size={19} />
@@ -77,12 +79,6 @@ export default function Portfolio() {
             </article>
           ))}
         </div>
-
-        <p className="portfolio-disclaimer">
-          Visual references shown for the initial design. Replace with
-          original Lend Productions projects before presenting this
-          section as a client portfolio.
-        </p>
       </div>
     </section>
   );
