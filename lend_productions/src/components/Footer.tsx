@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "@phosphor-icons/react";
+import { useState, useEffect } from "react";
 
 const footerLinks = [
   { label: "Services", href: "#services" },
@@ -12,6 +13,12 @@ const footerLinks = [
 ];
 
 export default function Footer() {
+  const [currentYear, setCurrentYear] = useState("");
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear().toString());
+  }, []);
+
   return (
     <footer className="site-footer">
       <div className="container">
@@ -54,7 +61,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>
-            © {new Date().getFullYear()} Lend Productions.
+            © {currentYear} Lend Productions.
             All rights reserved.
           </span>
           <span>MADE WITH INTENTION.</span>
