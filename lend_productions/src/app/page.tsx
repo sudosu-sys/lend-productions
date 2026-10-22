@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Platforms from "@/components/Platforms";
 import Packages from "@/components/Packages";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <Platforms />
         <Packages />
         <Portfolio />
         <Contact />
