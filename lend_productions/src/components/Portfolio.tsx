@@ -17,12 +17,12 @@ const projects = [
   {
     title: "Culture in Focus",
     category: "CREATIVE DIRECTION",
-    image: "/images/portfolio/Photographer Walking Through Sunlit Park.png",
+    image: "/images/portfolio/Photographer Walking Through Woodland Park.png",
   },
   {
     title: "Editorial Look",
     category: "ART DIRECTION",
-    image: "/images/portfolio/Behind-the-Scenes Studio Shoot.png",
+    image: "/images/portfolio/Analysis_output_1.png",
   },
 ];
 
